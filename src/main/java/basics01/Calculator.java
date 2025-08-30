@@ -1,4 +1,4 @@
-package org.example.basics01;
+package basics01;
 
 public class Calculator {
     public static int add(int a, int b) {

@@ -1,4 +1,5 @@
-import org.example.basics01.Hello;
+
+import basics01.Hello;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

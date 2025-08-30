@@ -1,4 +1,4 @@
-package org.example.basics01;
+package basics01;
 
 public class Hello {
     public static String greet(String name) {
