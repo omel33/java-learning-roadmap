@@ -1,24 +1,20 @@
-
-import basics01.Hello;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-public class HelloTest {
+class HelloTest {
 
     @Test
     void shouldThrowExceptionIfNameIsNull() {
-      assertThrows(IllegalAccessException.class,()-> Hello.greet(null));
+        assertThrows(IllegalArgumentException.class, () -> basics01.Hello.greet(null));
     }
 
     @Test
     void shouldThrowExceptionIfNameIsBlank() {
-      assertThrows(IllegalAccessException.class,()-> Hello.greet(""));
-    }
-    @Test
-    void shouldReturnGreeting(){
-        assertEquals("Hello World", Hello.greet("World"));
+        assertThrows(IllegalArgumentException.class, () -> basics01.Hello.greet("   "));
     }
 
+    @Test
+    void shouldReturnGreeting() {
+        assertEquals("Hello, World!", basics01.Hello.greet("world"));
+    }
 }
